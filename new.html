@@ -1,0 +1,69 @@
+<!-- index.html -->
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Expense Tracker</title> 
+	<link rel="stylesheet" type="text/css" href="stylee.css" /> 
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head> 
+
+<body> 
+	<div class="container"> 
+		<h1>Expense Tracker</h1> 
+		<form id="expense-form"> 
+			<input type="text"
+				id="expense-name"
+				placeholder="Expense Name" required /> 
+			<input type="number"
+				id="expense-amount"
+				placeholder="Amount" required /> <br><br>
+			<button type="submit"> 
+				Add Expense 
+			</button> 
+		</form> 
+        <!--pie chart-->
+        <div class="charts-container">
+            <div class="expense-chart">
+                <h2>Expense Distribution</h2>
+                <canvas id="expensePieChart"></canvas>
+            </div>
+        </div>
+		<div class="expense-table"> 
+			<table> 
+				<thead> 
+					<tr> 
+						<th>Expense Name</th> 
+						<th>Amount</th> 
+						<th>Action</th> 
+					</tr> 
+				</thead> 
+				<tbody id="expense-list"></tbody> 
+			</table> 
+			<div class="total-amount"> 
+				<strong>Total:</strong> 
+				R<span id="total-amount">0</span> 
+			</div> 
+              <!-- New Dashboard Section -->
+        <div class="dashboard">
+            <h2>Dashboard</h2>
+            <div>
+                <strong>Total Items:</strong> <span id="total-expenses">0</span>
+            </div>
+            <!-- Add more insights as needed -->
+        </div>
+
+        <!-- Clear Local Storage Button -->
+        <button onclick="clearLocalStorage()">Clear Local Storage</button>
+    </div>
+		</div> 
+	</div> 
+    
+      
+	<script src="scriptt.js"></script> 
+    <script src="skit.js"></script> 
+</body> 
+
+</html>
